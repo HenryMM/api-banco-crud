@@ -37,6 +37,7 @@ public class Movimiento {
     private BigDecimal saldoDisponible;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @com.fasterxml.jackson.annotation.JsonBackReference
     @JoinColumn(name = "CUENTA_ID")
     private Cuenta cuenta;
 

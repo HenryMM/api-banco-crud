@@ -1,9 +1,10 @@
 package com.example.apibancocrud.controller;
 
-
 import java.util.List;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +24,7 @@ import com.example.apibancocrud.service.ClienteService;
 @RestController
 @RequestMapping("/clientes")
 public class ClienteController {
+    private static final Logger logger = LoggerFactory.getLogger(ClienteController.class);
 
     private final ClienteService clienteService;
 
@@ -33,12 +35,14 @@ public class ClienteController {
 
     @GetMapping
     public ResponseEntity<List<ClienteDTO>> getAllClientes() {
+    logger.info("Obteniendo todos los clientes");
         List<ClienteDTO> clientes = clienteService.findAll();
         return ResponseEntity.ok(clientes);
     }
 
     @GetMapping("/{clienteId}")
     public ResponseEntity<ClienteDTO> getClienteById(@PathVariable Long clienteId) {
+    logger.info("Obteniendo cliente con id: {}", clienteId);
         Optional<ClienteDTO> cliente = clienteService.findById(clienteId);
         return cliente.map(ResponseEntity::ok)
                 .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
@@ -46,19 +50,22 @@ public class ClienteController {
 
     @PostMapping
     public ResponseEntity<Cliente> createCliente(@RequestBody Cliente cliente) {
+    logger.info("Creando nuevo cliente: {}", cliente);
         Cliente saved = clienteService.save(cliente);
         return ResponseEntity.status(HttpStatus.CREATED).body(saved);
     }
 
-    @PutMapping("/{clienteId}")
-    public ResponseEntity<Cliente> updateCliente(@PathVariable Long clienteId, @RequestBody Cliente cliente) {
-        return clienteService.update(clienteId, cliente)
+    @PutMapping("/{id}")
+    public ResponseEntity<Cliente> updateCliente(@PathVariable Long id, @RequestBody Cliente cliente) {
+    logger.info("Actualizando cliente con id: {}", id);
+        return clienteService.update(id, cliente)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
 
     @DeleteMapping("/{clienteId}")
     public ResponseEntity<Void> deleteCliente(@PathVariable Long clienteId) {
+    logger.info("Eliminando (lógico) cliente con id: {}", clienteId);
         boolean deleted = clienteService.delete(clienteId);
         if (deleted) {
             return ResponseEntity.noContent().build();
