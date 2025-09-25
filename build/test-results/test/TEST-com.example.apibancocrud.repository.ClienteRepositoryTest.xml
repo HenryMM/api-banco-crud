@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.apibancocrud.repository.ClienteRepositoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-09-25T07:35:54" hostname="MSI" time="0.189">
+  <properties/>
+  <testcase name="Eliminar cliente" classname="com.example.apibancocrud.repository.ClienteRepositoryTest" time="0.154"/>
+  <testcase name="Guardar y buscar cliente por ID" classname="com.example.apibancocrud.repository.ClienteRepositoryTest" time="0.017"/>
+  <testcase name="Guardar cliente usando saveWithLog" classname="com.example.apibancocrud.repository.ClienteRepositoryTest" time="0.016"/>
+  <system-out><![CDATA[02:35:50.809 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.apibancocrud.repository.ClienteRepositoryTest]: ClienteRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+02:35:51.180 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.apibancocrud.ApiBancoCrudApplication for test class com.example.apibancocrud.repository.ClienteRepositoryTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2025-09-25T02:35:51.635-05:00  INFO 35208 --- [    Test worker] c.e.a.repository.ClienteRepositoryTest   : Starting ClienteRepositoryTest using Java 21.0.8 with PID 35208 (started by Henry in C:\Users\Henry\Documents\Prueba tecnica BP\api-banco-crud)
+2025-09-25T02:35:51.637-05:00  INFO 35208 --- [    Test worker] c.e.a.repository.ClienteRepositoryTest   : No active profile set, falling back to 1 default profile: "default"
+2025-09-25T02:35:52.105-05:00  INFO 35208 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-25T02:35:52.177-05:00  INFO 35208 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 4 JPA repository interfaces.
+2025-09-25T02:35:52.252-05:00  INFO 35208 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2025-09-25T02:35:52.463-05:00  INFO 35208 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:64b94494-432c-4328-9ec7-89223bee992c;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2025-09-25T02:35:52.959-05:00  INFO 35208 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-25T02:35:53.069-05:00  INFO 35208 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-09-25T02:35:53.113-05:00  INFO 35208 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-25T02:35:53.234-05:00  INFO 35208 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-25T02:35:53.287-05:00  WARN 35208 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-25T02:35:54.148-05:00  INFO 35208 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: alter table if exists cliente alter column id set data type bigint
+Hibernate: alter table if exists cliente alter column persona_id set data type bigint
+Hibernate: alter table if exists cuenta alter column id set data type bigint
+Hibernate: alter table if exists cuenta alter column saldo_inicial set data type numeric(38,2)
+Hibernate: alter table if exists cuenta alter column cliente_id set data type bigint
+Hibernate: alter table if exists movimiento alter column id set data type bigint
+Hibernate: alter table if exists movimiento alter column movimiento set data type numeric(38,2)
+Hibernate: alter table if exists movimiento alter column saldo_disponible set data type numeric(38,2)
+Hibernate: alter table if exists movimiento alter column saldo_inicial set data type numeric(38,2)
+Hibernate: alter table if exists movimiento alter column cuenta_id set data type bigint
+Hibernate: alter table if exists persona alter column id set data type bigint
+2025-09-25T02:35:54.248-05:00  INFO 35208 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-25T02:35:54.697-05:00  INFO 35208 --- [    Test worker] c.e.a.repository.ClienteRepositoryTest   : Started ClienteRepositoryTest in 3.425 seconds (process running for 6.766)
+Hibernate: insert into cliente (contrasena,estado,persona_id,id) values (?,?,?,default)
+Hibernate: insert into cliente (contrasena,estado,persona_id,id) values (?,?,?,default)
+2025-09-25T02:35:54.887-05:00  INFO 35208 --- [    Test worker] c.e.a.repository.ClienteRepository       : Guardando cliente en repository: com.example.apibancocrud.model.Cliente@443b9ebb
+Hibernate: insert into cliente (contrasena,estado,persona_id,id) values (?,?,?,default)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

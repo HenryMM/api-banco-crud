@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.apibancocrud.repository.CuentaRepositoryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-09-25T07:35:54" hostname="MSI" time="0.022">
+  <properties/>
+  <testcase name="Eliminar cuenta" classname="com.example.apibancocrud.repository.CuentaRepositoryTest" time="0.011"/>
+  <testcase name="Guardar y buscar cuenta por ID" classname="com.example.apibancocrud.repository.CuentaRepositoryTest" time="0.009"/>
+  <system-out><![CDATA[2025-09-25T02:35:54.905-05:00  INFO 35208 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.apibancocrud.repository.CuentaRepositoryTest]: CuentaRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-09-25T02:35:54.925-05:00  INFO 35208 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.apibancocrud.ApiBancoCrudApplication for test class com.example.apibancocrud.repository.CuentaRepositoryTest
+Hibernate: insert into cuenta (cliente_id,estado,numero_cuenta,saldo_inicial,tipo,id) values (?,?,?,?,?,default)
+Hibernate: insert into cuenta (cliente_id,estado,numero_cuenta,saldo_inicial,tipo,id) values (?,?,?,?,?,default)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

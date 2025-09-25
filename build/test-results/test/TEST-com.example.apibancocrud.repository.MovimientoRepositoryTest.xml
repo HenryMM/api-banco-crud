@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.apibancocrud.repository.MovimientoRepositoryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-09-25T07:35:54" hostname="MSI" time="0.019">
+  <properties/>
+  <testcase name="Eliminar movimiento" classname="com.example.apibancocrud.repository.MovimientoRepositoryTest" time="0.012"/>
+  <testcase name="Guardar y buscar movimiento por ID" classname="com.example.apibancocrud.repository.MovimientoRepositoryTest" time="0.006"/>
+  <system-out><![CDATA[2025-09-25T02:35:54.953-05:00  INFO 35208 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.apibancocrud.repository.MovimientoRepositoryTest]: MovimientoRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-09-25T02:35:54.968-05:00  INFO 35208 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.apibancocrud.ApiBancoCrudApplication for test class com.example.apibancocrud.repository.MovimientoRepositoryTest
+Hibernate: insert into movimiento (cuenta_id,estado,fecha,movimiento,saldo_disponible,saldo_inicial,id) values (?,?,?,?,?,?,default)
+Hibernate: insert into movimiento (cuenta_id,estado,fecha,movimiento,saldo_disponible,saldo_inicial,id) values (?,?,?,?,?,?,default)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

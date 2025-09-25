@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.apibancocrud.controller.ClienteControllerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-09-25T07:35:50" hostname="MSI" time="0.367">
+  <properties/>
+  <testcase name="Actualizar cliente no existente" classname="com.example.apibancocrud.controller.ClienteControllerTest" time="0.295"/>
+  <testcase name="Obtener cliente por id no existente" classname="com.example.apibancocrud.controller.ClienteControllerTest" time="0.005"/>
+  <testcase name="Crear cliente" classname="com.example.apibancocrud.controller.ClienteControllerTest" time="0.004"/>
+  <testcase name="Obtener todos los clientes" classname="com.example.apibancocrud.controller.ClienteControllerTest" time="0.028"/>
+  <testcase name="Eliminar cliente existente" classname="com.example.apibancocrud.controller.ClienteControllerTest" time="0.003"/>
+  <testcase name="Actualizar cliente existente" classname="com.example.apibancocrud.controller.ClienteControllerTest" time="0.004"/>
+  <testcase name="Obtener cliente por id existente" classname="com.example.apibancocrud.controller.ClienteControllerTest" time="0.001"/>
+  <testcase name="Eliminar cliente no existente" classname="com.example.apibancocrud.controller.ClienteControllerTest" time="0.001"/>
+  <system-out><![CDATA[02:35:50.275 [Test worker] INFO com.example.apibancocrud.controller.ClienteController -- Actualizando cliente con id: 2
+02:35:50.416 [Test worker] INFO com.example.apibancocrud.controller.ClienteController -- Obteniendo cliente con id: 2
+02:35:50.423 [Test worker] INFO com.example.apibancocrud.controller.ClienteController -- Creando nuevo cliente: com.example.apibancocrud.model.Cliente@554cd74a
+02:35:50.429 [Test worker] INFO com.example.apibancocrud.controller.ClienteController -- Obteniendo todos los clientes
+02:35:50.462 [Test worker] INFO com.example.apibancocrud.controller.ClienteController -- Eliminando (lógico) cliente con id: 1
+02:35:50.467 [Test worker] INFO com.example.apibancocrud.controller.ClienteController -- Actualizando cliente con id: 1
+02:35:50.473 [Test worker] INFO com.example.apibancocrud.controller.ClienteController -- Obteniendo cliente con id: 1
+02:35:50.478 [Test worker] INFO com.example.apibancocrud.controller.ClienteController -- Eliminando (lógico) cliente con id: 2
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\Henry\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.13\979ce25f7d3096a2e82214ba7dc972a05ce7a171\byte-buddy-agent-1.14.13.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

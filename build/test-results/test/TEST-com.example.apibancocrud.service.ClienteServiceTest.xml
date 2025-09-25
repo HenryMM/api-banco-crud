@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.apibancocrud.service.ClienteServiceTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-09-25T07:35:54" hostname="MSI" time="0.237">
+  <properties/>
+  <testcase name="findAll retorna lista de ClienteDTO" classname="com.example.apibancocrud.service.ClienteServiceTest" time="0.21"/>
+  <testcase name="update actualiza cliente existente" classname="com.example.apibancocrud.service.ClienteServiceTest" time="0.006"/>
+  <testcase name="findById retorna vacío si no existe" classname="com.example.apibancocrud.service.ClienteServiceTest" time="0.004"/>
+  <testcase name="delete cambia estado a ELIMINADO si existe" classname="com.example.apibancocrud.service.ClienteServiceTest" time="0.006"/>
+  <testcase name="save guarda cliente y persona si es necesario" classname="com.example.apibancocrud.service.ClienteServiceTest" time="0.002"/>
+  <testcase name="delete retorna false si no existe" classname="com.example.apibancocrud.service.ClienteServiceTest" time="0.002"/>
+  <testcase name="update retorna vacío si no existe" classname="com.example.apibancocrud.service.ClienteServiceTest" time="0.001"/>
+  <testcase name="findById retorna ClienteDTO si existe" classname="com.example.apibancocrud.service.ClienteServiceTest" time="0.002"/>
+  <system-out><![CDATA[2025-09-25T02:35:55.200-05:00  INFO 35208 --- [    Test worker] c.e.apibancocrud.service.ClienteService  : Buscando todos los clientes
+2025-09-25T02:35:55.208-05:00  INFO 35208 --- [    Test worker] c.e.apibancocrud.service.ClienteService  : Actualizando cliente con id: 1
+2025-09-25T02:35:55.212-05:00  INFO 35208 --- [    Test worker] c.e.apibancocrud.service.ClienteService  : Buscando cliente por id: 2
+2025-09-25T02:35:55.218-05:00  INFO 35208 --- [    Test worker] c.e.apibancocrud.service.ClienteService  : Eliminando (lógico) cliente con id: 1
+2025-09-25T02:35:55.222-05:00  INFO 35208 --- [    Test worker] c.e.apibancocrud.service.ClienteService  : Guardando cliente: com.example.apibancocrud.model.Cliente@102dff25
+2025-09-25T02:35:55.224-05:00  INFO 35208 --- [    Test worker] c.e.apibancocrud.service.ClienteService  : Eliminando (lógico) cliente con id: 2
+2025-09-25T02:35:55.226-05:00  INFO 35208 --- [    Test worker] c.e.apibancocrud.service.ClienteService  : Actualizando cliente con id: 2
+2025-09-25T02:35:55.228-05:00  INFO 35208 --- [    Test worker] c.e.apibancocrud.service.ClienteService  : Buscando cliente por id: 1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
