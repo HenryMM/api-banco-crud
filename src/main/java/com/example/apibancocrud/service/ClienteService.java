@@ -1,26 +1,14 @@
 
 package com.example.apibancocrud.service;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import com.example.apibancocrud.model.Cliente;
-import com.example.apibancocrud.model.ClienteDTO;
-import com.example.apibancocrud.repository.ClienteRepository;
-import com.example.apibancocrud.repository.PersonaRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 import com.example.apibancocrud.model.Cliente;
 import com.example.apibancocrud.model.ClienteDTO;
