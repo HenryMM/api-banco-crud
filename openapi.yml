@@ -1,0 +1,117 @@
+openapi: 3.0.3
+info:
+  title: API Banco CRUD
+  version: 1.0.0
+  description: API REST para gestión de clientes
+servers:
+  - url: http://localhost:8080
+paths:
+  /clientes:
+    get:
+      summary: Obtener todos los clientes
+      responses:
+        '200':
+          description: Lista de clientes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Cliente'
+    post:
+      summary: Crear un nuevo cliente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cliente'
+      responses:
+        '201':
+          description: Cliente creado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cliente'
+  /clientes/{clienteId}:
+    get:
+      summary: Obtener cliente por ID
+      parameters:
+        - in: path
+          name: clienteId
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Cliente encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cliente'
+        '404':
+          description: Cliente no encontrado
+    put:
+      summary: Actualizar cliente existente
+      parameters:
+        - in: path
+          name: clienteId
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cliente'
+      responses:
+        '200':
+          description: Cliente actualizado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cliente'
+        '404':
+          description: Cliente no encontrado
+    delete:
+      summary: Eliminar cliente
+      parameters:
+        - in: path
+          name: clienteId
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Cliente eliminado
+        '404':
+          description: Cliente no encontrado
+components:
+  schemas:
+    Cliente:
+      type: object
+      properties:
+        clienteid:
+          type: integer
+        contraseña:
+          type: string
+        estado:
+          type: string
+        persona:
+          $ref: '#/components/schemas/Persona'
+    Persona:
+      type: object
+      properties:
+        nombre:
+          type: string
+        genero:
+          type: string
+        edad:
+          type: integer
+        identificación:
+          type: string
+        dirección:
+          type: string
+        teléfono:
+          type: string
